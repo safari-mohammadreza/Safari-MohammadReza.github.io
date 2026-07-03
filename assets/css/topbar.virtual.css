@@ -61,10 +61,17 @@
 }
 
 .page-home {  
-  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
   width: 100%;
-  height: 980px;
+  min-height: 100vh;
   z-index: 99;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .page-home::before {
@@ -80,7 +87,7 @@
 
 .page-home .navbar {
   position: absolute;
-  top: auto;
+  top: 0;
   left: 0;
   width: 100%;
   padding-top: 6px;
@@ -102,7 +109,6 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
   color: #fff;
   z-index: 10;
 }
