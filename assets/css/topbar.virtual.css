@@ -68,6 +68,7 @@
   padding: 0;
   width: 100%;
   min-height: 100vh;
+  overflow: visible;
   z-index: 99;
   background-repeat: no-repeat;
   background-size: cover;
@@ -128,14 +129,31 @@
 }
 
 .page-home .badge {
+  display: inline-block;
   padding: 16px 24px;
   background-color: rgba(239, 56, 36, 0.15);
   color: #EF3724;
   text-shadow: 0 2px 4px rgba(23, 25, 37, 0.4);
   font-size: clamp(0.8125rem, 2.5vw + 0.5rem, 1rem);
+  font-weight: 600;
+  line-height: 1.5;
   border-radius: 40px;
   max-width: 100%;
   text-align: center;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+@media (max-width: 767.98px) {
+  .page-home .caption-header {
+    padding-top: 4.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .page-home .badge {
+    padding: 12px 16px;
+  }
 }
 
 .page-home .floating-button {
