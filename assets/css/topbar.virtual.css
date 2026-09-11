@@ -216,14 +216,14 @@
   background-color: #e3e5e9;
 }
 
-.timeline li {
+.timeline > li {
   position: relative;
   display: block;
   padding-left: 30px;
   margin-bottom: 20px;
 }
 
-.timeline li::before {
+.timeline > li::before {
   content: '';
   position: absolute;
   top: 8px;
@@ -235,8 +235,10 @@
   border-radius: 50%;
 }
 
-.timeline li .title {
-  width: 150px;
+.timeline > li .title {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
   padding: 6px 20px;
   background-color: #747474;
   color: #fff;
@@ -244,24 +246,124 @@
   border-radius: 30px 0 60px 30px;
 }
 
-.timeline li .details {
+.timeline > li .details {
   background-color: #f4f5f8;
   margin-top: 8px;
   padding: 20px;
   border-radius: 4px;
 }
 
-.timeline li .details h5,
-.timeline li .details p {
+.timeline > li .details h5,
+.timeline > li .details p {
   margin-bottom: 0;
 }
 
-.timeline li .details small {
+.timeline > li .details p + p,
+.timeline > li .details small + p {
+  margin-top: 6px;
+}
+
+.timeline > li .details small {
   display: block;
   font-weight: 500;
   font-size: 14px;
   margin-top: 5px;
+  margin-bottom: 6px;
+}
+
+.timeline .details .exp-meta {
+  color: #6c757d;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.timeline .details .exp-summary {
+  margin-top: 10px;
+  color: #4a4a4a;
+  line-height: 1.55;
+}
+
+.timeline .details ul.exp-bullets {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  list-style: disc;
+}
+
+.timeline .details ul.exp-bullets li {
+  position: static;
+  display: list-item;
+  padding-left: 0;
+  margin-bottom: 6px;
+  color: #4a4a4a;
+  line-height: 1.5;
+}
+
+.timeline .details ul.exp-bullets li::before {
+  content: none;
+}
+
+.timeline .details .exp-skills {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #5a5a5a;
+  font-weight: 500;
+}
+
+.edu-logo {
+  display: block;
+  max-width: 100px;
+  height: auto;
   margin-bottom: 10px;
+}
+
+.edu-logo-polimi {
+  max-width: 210px;
+}
+
+.skills-professional {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.skill-category {
+  margin-bottom: 28px;
+}
+
+.skill-category:last-child {
+  margin-bottom: 0;
+}
+
+.skill-category-title {
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #747474;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background-color: #f4f5f8;
+  border: 1px solid #e3e5e9;
+  border-radius: 4px;
+  color: #212529;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.skill-pill i {
+  width: 18px;
+  text-align: center;
 }
 
 .page-service {
@@ -548,11 +650,11 @@
   border-color: #EF3724;
 }
 
-.theme-red .timeline li:first-child .title {
+.theme-red .timeline > li:first-child .title {
   background-color: #EF3724;
 }
 
-.theme-red .timeline li:first-child::before {
+.theme-red .timeline > li:first-child::before {
   background-color: #EF3724;
   box-shadow: 0 0 0 2px #EF3724;
 }
@@ -579,11 +681,11 @@
   border-color: #2960f7;
 }
 
-.theme-blue .timeline li:first-child .title {
+.theme-blue .timeline > li:first-child .title {
   background-color: #2960f7;
 }
 
-.theme-blue .timeline li:first-child::before {
+.theme-blue .timeline > li:first-child::before {
   background-color: #2960f7;
   box-shadow: 0 0 0 2px #2960f7;
 }
@@ -614,11 +716,11 @@
   border-color: #8cc63f;
 }
 
-.theme-green .timeline li:first-child .title {
+.theme-green .timeline > li:first-child .title {
   background-color: #8cc63f;
 }
 
-.theme-green .timeline li:first-child::before {
+.theme-green .timeline > li:first-child::before {
   background-color: #8cc63f;
   box-shadow: 0 0 0 2px #8cc63f;
 }
@@ -649,11 +751,11 @@
   border-color: #fd7e14;
 }
 
-.theme-orange .timeline li:first-child .title {
+.theme-orange .timeline > li:first-child .title {
   background-color: #fd7e14;
 }
 
-.theme-orange .timeline li:first-child::before {
+.theme-orange .timeline > li:first-child::before {
   background-color: #fd7e14;
   box-shadow: 0 0 0 2px #fd7e14;
 }
@@ -684,11 +786,11 @@
   border-color: #6f42c1;
 }
 
-.theme-purple .timeline li:first-child .title {
+.theme-purple .timeline > li:first-child .title {
   background-color: #6f42c1;
 }
 
-.theme-purple .timeline li:first-child::before {
+.theme-purple .timeline > li:first-child::before {
   background-color: #6f42c1;
   box-shadow: 0 0 0 2px #6f42c1;
 }
